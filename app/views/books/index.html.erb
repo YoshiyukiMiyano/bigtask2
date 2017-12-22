@@ -1,0 +1,64 @@
+
+<div class="container">
+<div class="notice-cent">
+<p><%= notice %></p>
+</div>
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="panel panel-default">
+        <div class="panel-body"></div>
+        <div class="user-name">yossy</div>
+        <div class="user-id">@oreore</div><br>
+        <div class="row">
+          <div class="col-xs-4">
+            <div class="manaka">つぶやき<br>
+            <%= link_to Book.count%></div></div>
+          <div class="col-xs-4">
+            <div class="manaka">フォロー<br>0</div></div>
+          <div class="col-xs-4">
+            <div class="manaka">フォロワー<br>0</div></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-xs-8">
+ 
+<%= form_with(model: @book, local: true ,url: confirm_books_path ) do |form| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @book.errors.count %>件のエラーがあります。</h2>
+      <ul>
+
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="tsubu-box">
+    <%= form.text_field :content, placeholder: "いまどうしてる？", size: 70 %>
+  <%= form.submit("つぶつぶ") %>
+  </div>
+<% end %>
+
+        <tbody>
+          <% @books.reverse_each do |book| %>
+            <div class="list-group-item">
+            <tr>
+              <td>yossy</td>
+              <td>@oreore</td>
+              <div class="span-time-pull-right">
+<%#                <%= distance_of_time_in_words_to_now %>
+              </div>
+            <td><%= book.content %></td><br>
+              <td><%= link_to "つぶつぶを編集する", edit_book_path(book.id), class: 'btn btn-info' %></td>
+              <td><%= link_to "つぶつぶを削除する", book_path(book.id), method: :delete,data: {confirm: "本当に削除してもよろしいですか?" }, class: 'btn btn-danger' %></td>
+                <br>
+            </tr>
+            </div>
+          <% end %>
+        </tbody>
+    </div>
+  </div>
+</div>

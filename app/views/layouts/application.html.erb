@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tsubutsubu</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+  <header>
+<%#    <ul> %>
+<div class="top-container">
+  <div class="row">
+    <div class="top">
+      <div class="col-lg-5">
+        <%= link_to "ホーム", books_path %>
+      </div>
+      <div class="col-lg-2">
+        <div class="bird">
+<%#          <%= image_tag('bird_s.jpg') %> %>
+          <img src="<%= asset_path "bird_s.jpg" %>">
+        </div>
+      </div>
+      <div class="col-lg-5">
+      </div>
+    </div>
+  </div>
+</div>
+<%#    </ul> %>
+  </header>
+
+    <%= yield %>
+
+  <footer>
+<div class="bottom-container">
+    <div class="col-xs-4">
+    </div>
+    <div class="col-xs-4">
+    <p>ｙｏｓｓｙ</p>
+    <p>© 2017 Copyright yossy, inc.</p>
+    </div>
+    <div class="col-xs-4">
+    </div>
+  </footer>
+
+  </body>
+</html>

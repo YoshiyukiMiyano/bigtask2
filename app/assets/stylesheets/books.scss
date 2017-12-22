@@ -1,0 +1,154 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.bird{
+  color: #ffffff;
+/*    color: #1da1f2; */ 
+/*    text-align: center; */
+  cursor: pointer; 
+  font-size: 21px; 
+  margin: 0 auto; 
+  display: inline-block;
+  transition: all .25s ease-in-out;
+  font-weight: bold;
+}
+
+.container{
+/*  margin-top:20px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #D1EBFF;
+}
+
+.top-container{
+  border-style: ridge;
+	border-bottom-width: 3px;
+	padding-left: 70px;
+	height: 50px;
+  line-height: 50px;
+}
+.bottom-container{
+  border-style: ridge;
+	border-bottom-width: 3px;
+	text-align: center;
+}
+
+.notice-cent{
+  text-align: center;
+}
+
+.left-content{
+}
+
+.panel{
+	box-shadow: none;
+	border-bottom-width: 3px;
+}
+.user-name{
+  font-size: 20px;
+	font-weight: 600;
+  color: #555;
+  text-align: center;
+}
+.user-id{
+  color: #aaa;
+  text-align: center;
+/*  &:hover; */ 
+  text-decoration: none;
+　border-bottom: 1px solid #555;
+}
+.user-activity{
+　text-align: center;
+}
+.manaka{
+  text-align: center;
+}
+
+.row{
+  border-color: #ffffff; 
+　border-bottom: 1px solid #ddd;
+　padding: 10px 0px;
+}
+.text{
+　font-size: 12px;
+　color: #777;
+}
+.num{
+　font-size: 18px;  
+}
+
+.tsubu-box {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border: 1px solid #e6ecf0;
+  color: #ff0000;
+  background-color: #ffe5e5;
+}
+
+::-webkit-input-placeholder {
+  color: #ff0000;
+}
+
+form.submit {
+  background-color: #f00;
+  color: #fff;
+  border-style: none;
+}
+
+
+h1, h2, h3, h4, h5 {
+  border-style: dotted;
+  border-width: 1px;
+  padding: 10px;
+}
+
+.panel-body{
+  padding: 1px;
+}
+
+div, p {
+  border-style: none;
+  border-width: 1px;
+}
+
+div.blog-panel {
+  height: 200px;
+}
+
+div.blog-panel {
+  height: 200px;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+
+.container-fluid{
+  background-color:#012F4B;
+  color:#fff;
+}
+
+.navbar-brand{
+  color: pink;
+}
+
+.navbar-header{
+  background-color:#F1F1F1;
+}
+
+.menu{
+  background-color:#012F4B;
+  color:#fff;
+}
+.menu li {
+  padding:5% 10%;
+  text-align:center;
+}
+
+.list-group-item{
+  border-style: solid;
+  border-bottom-width: 3px;
+}
+
+.edit-cont{
+  position:absolute;
+}
